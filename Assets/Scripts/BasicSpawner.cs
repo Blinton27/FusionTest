@@ -47,8 +47,15 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
 
         if (Input.GetKey(KeyCode.D))
             data.direction += Vector3.right;
+        if (_mouseButton0)
+            data.buttons |= NetworkInputData.MOUSEBUTTON1;
+        _mouseButton0 = false;
+        if (_mouseButton1)
+            data.buttons |= NetworkInputData.MOUSEBUTTON2;
+        _mouseButton1 = false;
 
         input.Set(data);
+        
     }
     public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) { }
@@ -95,5 +102,14 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
                 StartGame(GameMode.Client);
             }
         }
+    }
+
+    private bool _mouseButton0;
+    private bool _mouseButton1;
+
+    private void Update()
+    {
+        _mouseButton0 = _mouseButton0 | Input.GetMouseButton(0);
+        _mouseButton1 = _mouseButton1 || Input.GetMouseButton(1);
     }
 }
