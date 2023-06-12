@@ -24,9 +24,6 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         await StartGame();
     }
 
-
-
-
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
     {
         Debug.Log($"{player.PlayerId} joined.");
