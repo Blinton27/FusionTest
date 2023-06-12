@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
 {
+    [SerializeField]
+    private GameObject _playerPrefab;
     private NetworkRunner _runner;
    void Awake()
     {
