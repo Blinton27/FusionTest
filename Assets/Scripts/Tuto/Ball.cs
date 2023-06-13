@@ -1,4 +1,4 @@
-using Fusion;
+/*using Fusion;
 
 public class Ball : NetworkBehaviour
 {
@@ -16,4 +16,4 @@ public class Ball : NetworkBehaviour
         else
             transform.position += 5 * transform.forward * Runner.DeltaTime;
     }
-}
+}*/

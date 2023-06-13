@@ -1,4 +1,4 @@
-using Fusion;
+/*using Fusion;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -104,4 +104,4 @@ public class Player : NetworkBehaviour
             message = $"Some other player said: {message}\n";
         _messages.text += message;
     }
-}
+}*/

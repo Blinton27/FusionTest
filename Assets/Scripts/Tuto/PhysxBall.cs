@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using Fusion;
 
 public class PhysxBall : NetworkBehaviour
@@ -16,4 +16,4 @@ public class PhysxBall : NetworkBehaviour
         if (life.Expired(Runner))
             Runner.Despawn(Object);
     }
-}
+}*/
