@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7763106135477788212}
   - component: {fileID: 7763106135477788363}
   - component: {fileID: 7763106135477788214}
-  - component: {fileID: 5559021240345374377}
+  - component: {fileID: 1119506493802603116}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -87,7 +87,7 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 7763106135477788212}
-  - {fileID: 5559021240345374377}
+  - {fileID: 1119506493802603116}
   SimulationBehaviours: []
 --- !u!135 &7763106135477788214
 SphereCollider:
@@ -102,7 +102,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5559021240345374377
+--- !u!114 &1119506493802603116
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7763106135477788362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113886ed3484eec418bda013e74321e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f89a1baf65cfab4e815cf3df383e953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0

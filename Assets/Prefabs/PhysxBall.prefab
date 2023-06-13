@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 9089734897415617077}
   - component: {fileID: 4903578894755749030}
   - component: {fileID: 1277849345854978405}
-  - component: {fileID: 2026489355448522653}
+  - component: {fileID: 3369567373844806928}
   m_Layer: 0
   m_Name: PhysxBall
   m_TagString: Untagged
@@ -187,7 +187,7 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 9089734897415617077}
-  - {fileID: 2026489355448522653}
+  - {fileID: 3369567373844806928}
   SimulationBehaviours: []
 --- !u!135 &1277849345854978405
 SphereCollider:
@@ -202,7 +202,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2026489355448522653
+--- !u!114 &3369567373844806928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6055973828684410713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab9a17ab32090f64f83b24cb61dba030, type: 3}
+  m_Script: {fileID: 11500000, guid: e2151ae536a4c504496eb16d684fe7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0

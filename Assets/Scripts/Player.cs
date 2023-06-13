@@ -1,4 +1,5 @@
 using Fusion;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class Player : NetworkBehaviour
     [SerializeField] private Ball _prefabBall;
     [SerializeField] private PhysxBall _prefabPhysxBall;
 
+    [Networked] public NetworkString<_32> Name { get; set; }
     [Networked] private TickTimer delay { get; set; }
     [Networked(OnChanged = nameof(OnBallSpawned))]
     public NetworkBool spawned { get; set; }
@@ -29,26 +31,6 @@ public class Player : NetworkBehaviour
     {
         _cc = GetComponent<NetworkCharacterControllerPrototype>();
         _forward = transform.forward;
-    }
-
-    private void Update()
-    {
-        if (Object.HasInputAuthority && Input.GetKeyDown(KeyCode.R))
-        {
-            RPC_SendMessage("Hey Mate!");
-        }
-    }
-
-    [Rpc(RpcSources.InputAuthority, RpcTargets.All)]
-    public void RPC_SendMessage(string message, RpcInfo info = default)
-    {
-        if (_messages == null)
-            _messages = FindObjectOfType<Text>();
-        if (info.IsInvokeLocal)
-            message = $"You said: {message}\n";
-        else
-            message = $"Some other player said: {message}\n";
-        _messages.text += message;
     }
 
     public override void FixedUpdateNetwork()
