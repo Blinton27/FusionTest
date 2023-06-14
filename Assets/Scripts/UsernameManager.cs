@@ -9,7 +9,7 @@ public class UsernameManager : NetworkBehaviour
     private BasicSpawner _basicSpawner;
     private TMP_Text _username;
 
-    public override void Spawned()
+    /*public override void Spawned()
     {
         _basicSpawner = BasicSpawner.FindInstance();
         Debug.Log("IAfterSpawned.AfterSpawned");
@@ -17,5 +17,5 @@ public class UsernameManager : NetworkBehaviour
         Debug.Log(_username);
         _username.text = _basicSpawner.Username;
         Debug.Log(_username.text);
-    }
+    }*/
 }

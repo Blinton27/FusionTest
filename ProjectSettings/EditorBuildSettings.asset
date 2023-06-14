@@ -5,13 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: "Assets/Scenes/Ga\xEBlAttempt/MenuScene.unity"
-    guid: ec4754f2ea530fb4baa07c1e8279a0a8
-  - enabled: 0
-    path: Assets/Scenes/Tuto/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/TeamWork/BillardSceneMQ.unity
-    guid: 2b91a6d9c55fec04183a1f4707e6eee0
+    path: Assets/Scenes/00-Launch.unity
+    guid: 41f1e99f7cc4cd840bae9180714285e4
+  - enabled: 1
+    path: Assets/Scenes/01-BillardScene.unity
+    guid: e50abb7989dc26b44b0eec2679919348
   m_configObjects: {}

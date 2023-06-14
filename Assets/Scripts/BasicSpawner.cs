@@ -28,11 +28,6 @@ public class BasicSpawner : NetworkBehaviour, INetworkRunnerCallbacks
         get { return _username; }
     }
 
-    public static BasicSpawner FindInstance()
-    {
-        return FindObjectOfType<BasicSpawner>();
-    }
-
     public void OnSceneLoadDone(NetworkRunner runner)
     {
         Debug.Log("OnSceneLoadDone");
@@ -43,6 +38,7 @@ public class BasicSpawner : NetworkBehaviour, INetworkRunnerCallbacks
 
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
     {
+        Debug.Log(player);
         if (runner.IsServer)
         {
             _username = _usernameField.text;
@@ -64,7 +60,7 @@ public class BasicSpawner : NetworkBehaviour, INetworkRunnerCallbacks
         }
     }
 
-    public void TriggerStartGame(string gameMode)
+    /*public void TriggerStartGame(string gameMode)
     {
         if (gameMode != null)
         {
@@ -77,9 +73,9 @@ public class BasicSpawner : NetworkBehaviour, INetworkRunnerCallbacks
                 StartGame(GameMode.Client);
             }
         }
-    }
+    }*/
 
-    async void StartGame(GameMode mode)
+    /*async void StartGame(GameMode mode)
     {
         // Create the Fusion runner and let it know that we will be providing user input
         _runner = gameObject.AddComponent<NetworkRunner>();
@@ -104,7 +100,7 @@ public class BasicSpawner : NetworkBehaviour, INetworkRunnerCallbacks
             // afficher message d'erreur
             Debug.LogError($"Failed to Start: {result.ShutdownReason}");
         }
-    }
+    }*/
 
     /*public void OnInput(NetworkRunner runner, NetworkInput input) { }*/
     public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }
